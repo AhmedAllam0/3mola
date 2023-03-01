@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>حساب العموله</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .delivery-status {
+            font-weight: bold;
+        }
+
+
+        /* Center the commission results */
+        #commission-results {
+            text-align: center;
+        }
+
+        /* Style the product name */
+        .product-name {
+            font-weight: bold;
+        }
+
+        /* Style the delivery status */
+        .delivery-status {
+            font-weight: bold;
+        }
+
+        /* Style the row and columns */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-sm-6 {
+            flex-basis: 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        /* Style the commission results text */
+        #commission-results h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #commission-results p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">ماهي العموله ؟</h1>
+        <form id="commission-form" class="my-3 text-center">
+            <div class="form-group text-center">
+
+                <input type="text"  class="form-control" id="channel-name" name="channel-name" placeholder="اسم القناه/الشخص">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="product-name" name="product-name" placeholder="اسم المنتج">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="product-price" name="product-price"
+                    placeholder="سعر المنتج">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="commission-rate" name="commission-rate" step="0.01"
+                    min="0" placeholder="معدل عمولتك">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="shipping-cost" name="shipping-cost"
+                    placeholder="تكلفه الشحن">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="additional-expenses" name="additional-expenses"
+                    placeholder="مصاريف إضافيه">
+            </div>
+
+            <div id="form-group" class="form-group">
+                <label for="delivery-status">حاله التسليم</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="delivery-status" id="delivered"
+                        value="تم التوصيل">
+                    <label class="form-check-label" for="delivered">تم التوصيل</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="delivery-status" id="not-delivered"
+                        value="لم يتم التوصيل">
+                    <label class="form-check-label" for="not-delivered">لم يتم التوصيل </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="delivery-status" id="in-transit"
+                        value="في الطريق">
+                    <label class="form-check-label" for="in-transit">في الطريق</label>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">احسب</button>
+            </div>
+
+            <p id="error-message" class="text-danger"></p>
+        </form>
+        <div class="container my-5" id="commission-results"></div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

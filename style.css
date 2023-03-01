@@ -1,0 +1,29 @@
+input[type="radio"][value="delivered"]:checked + label {
+    background-color: green;
+    color: white;
+  }
+  
+  input[type="radio"][value="not-delivered"]:checked + label {
+    background-color: red;
+    color: white;
+  }
+  
+  input[type="radio"][value="in-transit"]:checked + label {
+    background-color: gray;
+    color: white;
+  }
+  
+  .my-info{
+    background-color: #2f2f2f;
+    color: #fff;
+    display: inline-flex;
+    padding: 10px;
+  }
+  body{
+    font-family: 'Cairo', sans-serif !important;
+    direction: rtl;
+  }
+
+  #form-group{
+ direction: ltr !important;
+  }
